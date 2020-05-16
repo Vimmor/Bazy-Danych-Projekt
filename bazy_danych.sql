@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `bazy_danych` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `bazy_danych`;
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bazy_danych
@@ -101,7 +99,7 @@ CREATE TABLE `daneproduktu` (
 
 LOCK TABLES `daneproduktu` WRITE;
 /*!40000 ALTER TABLE `daneproduktu` DISABLE KEYS */;
-INSERT INTO `daneproduktu` VALUES (1,'Piłka pingpongowa',1,2.50,'plastik'),(2,'Rakieta',2,120.00,'aluminium'),(3,'Piłka tenisowa',2,20.00,'');
+INSERT INTO `daneproduktu` VALUES (1,'Piłka pingpongowa',1,2.50,'plastik'),(2,'Rakieta',2,150.00,'aluminium'),(3,'Piłka tenisowa',2,20.00,'');
 /*!40000 ALTER TABLE `daneproduktu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,13 +113,15 @@ DROP TABLE IF EXISTS `faktury`;
 CREATE TABLE `faktury` (
   `idFaktury` int NOT NULL AUTO_INCREMENT,
   `idZamowienia` int NOT NULL,
-  `rodzaj` varchar(15) NOT NULL,
+  `idRodzajFaktury` int NOT NULL,
   `dataWystawienia` date NOT NULL,
   `terminPlatnosci` date NOT NULL,
   `czyOplacona` tinyint(1) NOT NULL,
   PRIMARY KEY (`idFaktury`),
   KEY `idZamowienia_idx` (`idZamowienia`),
   KEY `czyOplacona_idx` (`czyOplacona`),
+  KEY ` faktury_idRodzajFaktury_idx` (`idRodzajFaktury`),
+  CONSTRAINT ` faktury_idRodzajFaktury` FOREIGN KEY (`idRodzajFaktury`) REFERENCES `rodzajfaktury` (`idRodzajFaktury`),
   CONSTRAINT `faktury_idZamowienia` FOREIGN KEY (`idZamowienia`) REFERENCES `zamowienia` (`idZamowienia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -164,7 +164,7 @@ CREATE TABLE `kategoria` (
   `kategoria` varchar(20) NOT NULL,
   PRIMARY KEY (`idKategorii`),
   UNIQUE KEY `kategoria_UNIQUE` (`kategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,7 +280,6 @@ CREATE TABLE `produkty` (
   `cena` decimal(6,2) NOT NULL,
   `numerSeryjny` varchar(15) DEFAULT NULL,
   `idZamowienia` int DEFAULT NULL,
-  `czySprzedano` bit(1) DEFAULT NULL,
   PRIMARY KEY (`idProduktu`),
   UNIQUE KEY `numerSeryjny_UNIQUE` (`numerSeryjny`),
   KEY `produkty_idDanychProduktu_idx` (`idDanychProduktu`),
@@ -296,7 +295,7 @@ CREATE TABLE `produkty` (
 
 LOCK TABLES `produkty` WRITE;
 /*!40000 ALTER TABLE `produkty` DISABLE KEYS */;
-INSERT INTO `produkty` VALUES (1,1,0.50,'',NULL,_binary '\0'),(2,1,0.50,NULL,NULL,_binary '\0'),(3,1,2.00,NULL,NULL,_binary '\0'),(4,2,125.00,'A',NULL,_binary '\0'),(5,2,130.00,'B',NULL,_binary '\0'),(6,3,15.00,NULL,NULL,_binary '\0'),(7,3,15.00,NULL,NULL,_binary '\0');
+INSERT INTO `produkty` VALUES (1,1,0.50,'',NULL),(2,1,0.50,NULL,NULL),(3,1,2.00,NULL,NULL),(4,2,150.00,'A',NULL),(5,2,150.00,'B',NULL),(6,3,15.00,NULL,NULL),(7,3,15.00,NULL,NULL);
 /*!40000 ALTER TABLE `produkty` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,6 +345,55 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `numerSeryjny`,
  1 AS `cena`*/;
 SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `rodzajfaktury`
+--
+
+DROP TABLE IF EXISTS `rodzajfaktury`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `rodzajfaktury` (
+  `idRodzajFaktury` int NOT NULL AUTO_INCREMENT,
+  `rodzaj` varchar(15) NOT NULL,
+  PRIMARY KEY (`idRodzajFaktury`),
+  UNIQUE KEY `rodzaj_UNIQUE` (`rodzaj`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rodzajfaktury`
+--
+
+LOCK TABLES `rodzajfaktury` WRITE;
+/*!40000 ALTER TABLE `rodzajfaktury` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rodzajfaktury` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `statuszamowienia`
+--
+
+DROP TABLE IF EXISTS `statuszamowienia`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `statuszamowienia` (
+  `idStatusZamowienia` int NOT NULL AUTO_INCREMENT,
+  `status` varchar(15) NOT NULL,
+  PRIMARY KEY (`idStatusZamowienia`),
+  UNIQUE KEY `status_UNIQUE` (`status`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='		';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `statuszamowienia`
+--
+
+LOCK TABLES `statuszamowienia` WRITE;
+/*!40000 ALTER TABLE `statuszamowienia` DISABLE KEYS */;
+INSERT INTO `statuszamowienia` VALUES (2,'wysłano'),(1,'złożono'),(3,'zrealizowano');
+/*!40000 ALTER TABLE `statuszamowienia` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `typumowy`
@@ -430,13 +478,16 @@ CREATE TABLE `zamowienia` (
   `idZamowienia` int NOT NULL AUTO_INCREMENT,
   `idKlienta` int NOT NULL,
   `idPracownika` int NOT NULL,
-  `status` varchar(20) NOT NULL,
+  `idStatusZamowienia` int NOT NULL,
   `dataTransakcji` date NOT NULL,
+  `licznik` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`idZamowienia`),
   KEY `zamowienia_idPracownika_idx` (`idPracownika`),
   KEY `zamowienia_idKlienta_idx` (`idKlienta`),
+  KEY `zamowienia_idStatusZamowienia_idx` (`idStatusZamowienia`),
   CONSTRAINT `zamowienia_idKlienta` FOREIGN KEY (`idKlienta`) REFERENCES `klienci` (`idKlienta`),
-  CONSTRAINT `zamowienia_idPracownika` FOREIGN KEY (`idPracownika`) REFERENCES `pracownicy` (`idPracownika`)
+  CONSTRAINT `zamowienia_idPracownika` FOREIGN KEY (`idPracownika`) REFERENCES `pracownicy` (`idPracownika`),
+  CONSTRAINT `zamowienia_idStatusZamowienia` FOREIGN KEY (`idStatusZamowienia`) REFERENCES `statuszamowienia` (`idStatusZamowienia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -492,7 +543,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `fakturydlapracownika` AS select `f`.`idFaktury` AS `idFaktury`,`z`.`idZamowienia` AS `idZamowienia`,`f`.`rodzaj` AS `rodzaj`,`f`.`dataWystawienia` AS `dataWystawienia`,`f`.`terminPlatnosci` AS `terminPlatnosci`,`f`.`czyOplacona` AS `czyOplacona` from (`faktury` `f` join `zamowienia` `z`) where (`f`.`idZamowienia` = `z`.`idZamowienia`) */;
+/*!50001 VIEW `fakturydlapracownika` AS select `f`.`idFaktury` AS `idFaktury`,`z`.`idZamowienia` AS `idZamowienia`,`r`.`rodzaj` AS `rodzaj`,`f`.`dataWystawienia` AS `dataWystawienia`,`f`.`terminPlatnosci` AS `terminPlatnosci`,`f`.`czyOplacona` AS `czyOplacona` from ((`faktury` `f` join `zamowienia` `z`) join `rodzajfaktury` `r`) where ((`f`.`idZamowienia` = `z`.`idZamowienia`) and (`r`.`idRodzajFaktury` = `f`.`idRodzajFaktury`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -618,7 +669,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `zamowieniadlaklienta` AS select `z`.`idZamowienia` AS `idZamowienia`,`z`.`status` AS `status`,`z`.`dataTransakcji` AS `dataTransakcji` from `zamowienia` `z` */;
+/*!50001 VIEW `zamowieniadlaklienta` AS select `z`.`idZamowienia` AS `idZamowienia`,`s`.`status` AS `status`,`z`.`dataTransakcji` AS `dataTransakcji` from (`zamowienia` `z` join `statuszamowienia` `s`) where (`s`.`idStatusZamowienia` = `z`.`idStatusZamowienia`) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -636,7 +687,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `zamowieniadlapracownika` AS select `z`.`idZamowienia` AS `idZamowienia`,`z`.`status` AS `status`,`z`.`dataTransakcji` AS `dataTransakcji`,`d`.`imie` AS `imie`,`d`.`nazwisko` AS `nazwisko` from ((`zamowienia` `z` join `danepersonalne` `d`) join `klienci`) where ((`z`.`idKlienta` = `klienci`.`idKlienta`) and (`klienci`.`idDanych` = `d`.`idDanych`)) */;
+/*!50001 VIEW `zamowieniadlapracownika` AS select `z`.`idZamowienia` AS `idZamowienia`,`s`.`status` AS `status`,`z`.`dataTransakcji` AS `dataTransakcji`,`d`.`imie` AS `imie`,`d`.`nazwisko` AS `nazwisko` from (((`zamowienia` `z` join `danepersonalne` `d`) join `klienci`) join `statuszamowienia` `s`) where ((`z`.`idKlienta` = `klienci`.`idKlienta`) and (`klienci`.`idDanych` = `d`.`idDanych`) and (`s`.`idStatusZamowienia` = `z`.`idStatusZamowienia`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -650,4 +701,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-11 20:31:13
+-- Dump completed on 2020-05-16 11:10:28
