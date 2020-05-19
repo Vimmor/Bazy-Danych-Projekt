@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
--- Host: localhost    Database: shop_database
+-- Host: 127.0.0.1    Database: shop_database
 -- ------------------------------------------------------
 -- Server version	8.0.20
 
@@ -31,7 +31,7 @@ CREATE TABLE `adresy` (
   `miejscowosc` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`idAdresu`),
   KEY `kodPocztowy_idx` (`kodPocztowy`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `adresy` (
 
 LOCK TABLES `adresy` WRITE;
 /*!40000 ALTER TABLE `adresy` DISABLE KEYS */;
-INSERT INTO `adresy` VALUES (1,'Nowotarska','89','11','00-791','Warszawa'),(2,'Klonowa','23','1','22-983','Radom'),(3,'Górna','120','7','04-413','Warszawa'),(4,'Gruszowa','44','4','54-530','Wrocław'),(5,'Sztabowa','456','9','53-327','Wrocław'),(6,'Lipowa','191',NULL,'55-300','Środa Śląska'),(7,'Osiedlowa','12',NULL,'56-120','Brzeg Dolny'),(8,'Łukowa','123','4','56-120','Brzeg Dolny'),(9,'Główna','56',NULL,'56-100','Wołów'),(10,'Rynkowa','78','8','55-300','Środa Śląska'),(11,'Grójecka','126','17','53-118','Wrocław'),(12,'Grójecka','74','1','53-118','Wrocław'),(13,'Ślusarska','65','7','53-207','Wrocław'),(14,'Pochyła','98','7','53-512','Wrocław'),(15,NULL,'12',NULL,'55-330','Klęka'),(16,NULL,'5',NULL,'55-330','Gąsiorów'),(17,'Kolorowa','5','6','56-122','Brzeg Dolny'),(18,'Szkolna','2',NULL,'55-330','Miękinia'),(19,'Bzowa','56','1','56-100','Wołów'),(20,'Krzycka','16A',NULL,'53-020','Wrocław'),(21,'Liliowa','97',NULL,'59-700','Bolesławiec'),(22,'Hiszpańska','76','6','54-409','Wrocław'),(23,'Pozioma','72',NULL,'55-300','Środa Śląska'),(24,'Henrykowska','345','14','50-503','Wrocław'),(25,'Świerkowa','432','5','54-020','Wrocław');
+INSERT INTO `adresy` VALUES (1,'Nowotarska','89','11','00-791','Warszawa'),(2,'Klonowa','23','1','22-983','Radom'),(3,'Górna','120','7','04-413','Warszawa'),(4,'Gruszowa','44','4','54-530','Wrocław'),(5,'Sztabowa','456','9','53-327','Wrocław'),(6,'Lipowa','191',NULL,'55-300','Środa Śląska'),(7,'Osiedlowa','12',NULL,'56-120','Brzeg Dolny'),(8,'Łukowa','123','4','56-120','Brzeg Dolny'),(9,'Główna','56',NULL,'56-100','Wołów'),(10,'Rynkowa','78','8','55-300','Środa Śląska'),(11,'Grójecka','126','17','53-118','Wrocław'),(12,'Grójecka','74','1','53-118','Wrocław'),(13,'Ślusarska','65','7','53-207','Wrocław'),(14,'Pochyła','98','7','53-512','Wrocław'),(15,NULL,'12',NULL,'55-330','Klęka'),(16,NULL,'5',NULL,'55-330','Gąsiorów'),(17,'Kolorowa','5','6','56-122','Brzeg Dolny'),(18,'Szkolna','2',NULL,'55-330','Miękinia'),(19,'Bzowa','56','1','56-100','Wołów'),(20,'Krzycka','16A',NULL,'53-020','Wrocław'),(21,'Liliowa','97',NULL,'59-700','Bolesławiec'),(22,'Hiszpańska','76','6','54-409','Wrocław'),(23,'Pozioma','72',NULL,'55-300','Środa Śląska'),(24,'Henrykowska','345','14','50-503','Wrocław'),(25,'Świerkowa','432','5','54-020','Wrocław'),(36,'Kolejowa','2','15','82-200','Malbork');
 /*!40000 ALTER TABLE `adresy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,13 +56,13 @@ CREATE TABLE `danepersonalne` (
   `imie` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nazwisko` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `login` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hasło` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `haslo` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`idDanych`),
   UNIQUE KEY `login_UNIQUE` (`login`),
   UNIQUE KEY `email_UNIQUE` (`email`),
   KEY `imieNazwisko_idx` (`imie`,`nazwisko`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `danepersonalne` (
 
 LOCK TABLES `danepersonalne` WRITE;
 /*!40000 ALTER TABLE `danepersonalne` DISABLE KEYS */;
-INSERT INTO `danepersonalne` VALUES (1,'Jan','Nowak','Jan Nowak','jan0102','jnowak@wp.pl'),(2,'Jan','Nowacki','Jan Nowacki','jn1979','nowacji_jan@gmail.com'),(3,'Marian','Nowakowski','Marian Nowakowski','ptys01','m_nowakowski@onet.pl'),(4,'Daniel','Wiśniewski','Daniel Wiśniewski','danko1702','danwisniewski90@gmail.com'),(5,'Amelia','Żukowska','Amelia Żukowska','ami13','amelia_zuk87@o2.pl'),(6,'Łucja','Wojciechowska','Łucja Wojciechowska','lubieplacki123','wojciechowska_lucja@o2.pl'),(7,'Filip','Wilk','Filip Wilk','wilczek13','wilk1910@wp.pl'),(8,'Paulina','Pawlak','Paulina Pawlak','paulinka333','ppawlak@onet.pl'),(9,'Maria','Wróblewska','Maria Wróblewska ','lubiekotki0102','m.wroblewska@wp.pl'),(10,'Jan','Dębski','Jan Dębski','dabek15','jandebski@gmail.com'),(11,'Iga','Matuszewska','Iga Matuszewska','matuszewska12','matuszewska_iga99@wp.pl'),(12,'Karolina','Tomczak','Karolina Tomczak','lola0102','lola_tomczak@gmail.com'),(13,'Marcel','Kowalczyk','Marcel Kowalczyk','abcd1234','marcel95@gmail.com'),(14,'Daria','Stępień','Daria Stępień','darisia98','darianna_stepien@gmail.com'),(15,'Milena','Nowak','Milena Nowak','milenka09','m_nowak@o2.pl'),(16,'Ignacy','Kujawa','Ignacy Kujawa','ignas1111','ignacykujawa@wp.pl'),(17,'Alicja','Czajkowska','Alicja Czajkowska','ala0102','a_czajka@gmail.com'),(18,'Bartłomiej','Piasecki','Bartłomiej Piasecki','bartus0102','piaseckib@gmail.com'),(19,'Daria','Madej','Daria Madej','darianna0102','dariamadej@onet.pl'),(20,'Wiktoria','Walczak','Wiktoria Walczak','wika1020','wwalczak@onet.pl'),(21,'Adam','Jastrzębski','Adam Jastrzębski','adasko0102','jastrzebskiadam@gmail.com'),(22,'Ignacy','Laskowski','Ignacy Laskowski','ignacy0102','ignacy_las@gmail.com'),(23,'Małgorzata','Grabowska','Małgorzata Grabowska','grabka0102','gosiagrabowska@gmail.com'),(24,'Hanna','Sikorska','Hanna Sikorska','sikorka0102','sikorskahanna@wp.pl'),(25,'Szymon','Gajewski','Szymon Gajewski','gajo0102','gajewskiszymek@onet.pl'),(26,'Maciej','Mazurkiewicz','Maciej Mazurkiewicz','emem0102','maciej_em@wp.pl'),(27,'Marcel','Kozak','Marcel Kozak','kozakkozak01','kozak_maciej89@wp.pl'),(28,'Sylwia','Owczarek','Sylwia Owczarek','sylwus13','sylwia1212@gmail.com'),(29,'Zuzanna','Sadowska','Zuzanna Sadowska','zuzik12','zuza_sadowska@gmail.com'),(30,'Julia','Michalak','Julia Michalak','jules1020','jmichalak@gmail.com'),(31,'Damian','Wieczorek','Damian Wieczorek','dam0102','wieczorek95@gmaiul.com'),(32,'Piotr','Piotrowski','Piotr Piotrowski','piotrpiotr66','piotrowskipiotrek@wp.pl'),(33,'Klaudia','Dudek','Klaudia Dudek','dudek0102','k_dudek91@wp.pl'),(34,'Jakub','Krawczyk','Jakub Krawczyk','kubus25','kubakrawczyk@gmail.com'),(35,'Michał','Czech','Michał Czech','czechu0102','czech_michal90@gmail.com');
+INSERT INTO `danepersonalne` VALUES (1,'Jan','Nowak','Jan Nowak','jan0102','jnowak@wp.pl'),(2,'Jan','Nowacki','Jan Nowacki','jn1979','nowacji_jan@gmail.com'),(3,'Marian','Nowakowski','Marian Nowakowski','ptys01','m_nowakowski@onet.pl'),(4,'Daniel','Wiśniewski','Daniel Wiśniewski','danko1702','danwisniewski90@gmail.com'),(5,'Amelia','Żukowska','Amelia Żukowska','ami13','amelia_zuk87@o2.pl'),(6,'Łucja','Wojciechowska','Łucja Wojciechowska','lubieplacki123','wojciechowska_lucja@o2.pl'),(7,'Filip','Wilk','Filip Wilk','wilczek13','wilk1910@wp.pl'),(8,'Paulina','Pawlak','Paulina Pawlak','paulinka333','ppawlak@onet.pl'),(9,'Maria','Wróblewska','Maria Wróblewska ','lubiekotki0102','m.wroblewska@wp.pl'),(10,'Jan','Dębski','Jan Dębski','dabek15','jandebski@gmail.com'),(11,'Iga','Matuszewska','Iga Matuszewska','matuszewska12','matuszewska_iga99@wp.pl'),(12,'Karolina','Tomczak','Karolina Tomczak','lola0102','lola_tomczak@gmail.com'),(13,'Marcel','Kowalczyk','Marcel Kowalczyk','abcd1234','marcel95@gmail.com'),(14,'Daria','Stępień','Daria Stępień','darisia98','darianna_stepien@gmail.com'),(15,'Milena','Nowak','Milena Nowak','milenka09','m_nowak@o2.pl'),(16,'Ignacy','Kujawa','Ignacy Kujawa','ignas1111','ignacykujawa@wp.pl'),(17,'Alicja','Czajkowska','Alicja Czajkowska','ala0102','a_czajka@gmail.com'),(18,'Bartłomiej','Piasecki','Bartłomiej Piasecki','bartus0102','piaseckib@gmail.com'),(19,'Daria','Madej','Daria Madej','darianna0102','dariamadej@onet.pl'),(20,'Wiktoria','Walczak','Wiktoria Walczak','wika1020','wwalczak@onet.pl'),(21,'Adam','Jastrzębski','Adam Jastrzębski','adasko0102','jastrzebskiadam@gmail.com'),(22,'Ignacy','Laskowski','Ignacy Laskowski','ignacy0102','ignacy_las@gmail.com'),(23,'Małgorzata','Grabowska','Małgorzata Grabowska','grabka0102','gosiagrabowska@gmail.com'),(24,'Hanna','Sikorska','Hanna Sikorska','sikorka0102','sikorskahanna@wp.pl'),(25,'Szymon','Gajewski','Szymon Gajewski','gajo0102','gajewskiszymek@onet.pl'),(26,'Maciej','Mazurkiewicz','Maciej Mazurkiewicz','emem0102','maciej_em@wp.pl'),(27,'Marcel','Kozak','Marcel Kozak','kozakkozak01','kozak_maciej89@wp.pl'),(28,'Sylwia','Owczarek','Sylwia Owczarek','sylwus13','sylwia1212@gmail.com'),(29,'Zuzanna','Sadowska','Zuzanna Sadowska','zuzik12','zuza_sadowska@gmail.com'),(30,'Julia','Michalak','Julia Michalak','jules1020','jmichalak@gmail.com'),(31,'Damian','Wieczorek','Damian Wieczorek','dam0102','wieczorek95@gmaiul.com'),(32,'Piotr','Piotrowski','Piotr Piotrowski','piotrpiotr66','piotrowskipiotrek@wp.pl'),(33,'Klaudia','Dudek','Klaudia Dudek','dudek0102','k_dudek91@wp.pl'),(34,'Jakub','Krawczyk','Jakub Krawczyk','kubus25','kubakrawczyk@gmail.com'),(35,'Michał','Czech','Michał Czech','czechu0102','czech_michal90@gmail.com'),(36,'Grzegorz','Kowalski','gkowal','kowalski123','gk@gmail.com');
 /*!40000 ALTER TABLE `danepersonalne` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +101,7 @@ CREATE TABLE `daneproduktu` (
 
 LOCK TABLES `daneproduktu` WRITE;
 /*!40000 ALTER TABLE `daneproduktu` DISABLE KEYS */;
-INSERT INTO `daneproduktu` VALUES (1,'Piłka pingpongowa',1,1.50,'Plastik'),(2,'Rakieta',2,150.00,'Aluminium'),(3,'Piłka tenisowa',2,5.00,'Kauczuk'),(5,'Step',4,99.00,'Plastik'),(6,'Stepper',4,179.00,'Stal, plastik'),(7,'Mata treningowa',4,80.00,'Polichlorek winylu'),(8,'Ergometr',4,659.00,'Inny'),(9,'Mini bike',4,150.00,'Inny'),(10,'Rower stacjonarny',4,900.00,'Inny'),(11,'Kettlebell',4,79.00,'Żeliwo'),(12,'Skakanka',4,25.00,'Inny'),(13,'Hantel',4,40.00,'Stal'),(14,'Gryf',4,90.00,'Stal'),(15,'Talerz',4,5.00,'Żeliwo'),(16,'Zacisk',4,1.50,'Stal'),(17,'Piłka',5,40.00,'Inny'),(18,'Piłka',7,39.00,'Kauczuk'),(19,'Piłka',6,35.00,'Inny'),(20,'Piłka',8,35.00,'Kauczuk, guma');
+INSERT INTO `daneproduktu` VALUES (1,'Piłka pingpongowa',1,1.50,'Plastik'),(2,'Rakieta',2,300.00,'Aluminium'),(3,'Piłka tenisowa',2,5.00,'Kauczuk'),(5,'Step',4,99.00,'Plastik'),(6,'Stepper',4,179.00,'Stal, plastik'),(7,'Mata treningowa',4,80.00,'Polichlorek winylu'),(8,'Ergometr',4,659.00,'Inny'),(9,'Mini bike',4,150.00,'Inny'),(10,'Rower stacjonarny',4,900.00,'Inny'),(11,'Kettlebell',4,79.00,'Żeliwo'),(12,'Skakanka',4,25.00,'Inny'),(13,'Hantel',4,40.00,'Stal'),(14,'Gryf',4,90.00,'Stal'),(15,'Talerz',4,5.00,'Żeliwo'),(16,'Zacisk',4,1.50,'Stal'),(17,'Piłka',5,40.00,'Inny'),(18,'Piłka',7,39.00,'Kauczuk'),(19,'Piłka',6,35.00,'Inny'),(20,'Piłka',8,35.00,'Kauczuk, guma');
 /*!40000 ALTER TABLE `daneproduktu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -200,7 +200,7 @@ CREATE TABLE `klienci` (
   KEY `klienci_idAdresu_idx` (`idAdresu`),
   CONSTRAINT `klienci_idAdresu` FOREIGN KEY (`idAdresu`) REFERENCES `adresy` (`idAdresu`),
   CONSTRAINT `klienci_idDanych` FOREIGN KEY (`idDanych`) REFERENCES `danepersonalne` (`idDanych`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +209,7 @@ CREATE TABLE `klienci` (
 
 LOCK TABLES `klienci` WRITE;
 /*!40000 ALTER TABLE `klienci` DISABLE KEYS */;
-INSERT INTO `klienci` VALUES (1,6,'+48519374123',NULL,1),(2,7,'+48549234860',NULL,2),(3,8,NULL,NULL,3),(4,12,'+48544321777','6523871109',7),(5,9,'+48708155558','1234567895',4),(6,10,NULL,'9876543219',5),(7,11,'+48655984444',NULL,6),(8,13,NULL,NULL,8),(9,16,'+48123456789',NULL,9),(10,17,'+48603123456',NULL,10),(11,18,'+48505987772',NULL,11),(12,19,'+48800123224',NULL,12),(13,20,'+48605444765',NULL,13),(14,21,'+48789774424',NULL,14),(15,22,'+48799000204',NULL,15),(16,23,NULL,NULL,17),(17,27,'+48787352000','2299504016',16),(18,28,'+48505322110',NULL,18),(19,29,NULL,NULL,19),(20,30,'+48505211220',NULL,20),(21,31,'+48504100200','1234432146',21),(22,32,'+48755311004',NULL,22),(23,33,'+48604123442',NULL,23),(24,34,'+48604007002','4007457721',24),(25,35,NULL,NULL,25);
+INSERT INTO `klienci` VALUES (1,6,'+48519374123',NULL,1),(2,7,'+48549234860',NULL,2),(3,8,NULL,NULL,3),(4,12,'+48544321777','6523871109',7),(5,9,'+48708155558','1234567895',4),(6,10,NULL,'9876543219',5),(7,11,'+48655984444',NULL,6),(8,13,NULL,NULL,8),(9,16,'+48123456789',NULL,9),(10,17,'+48603123456',NULL,10),(11,18,'+48505987772',NULL,11),(12,19,'+48800123224',NULL,12),(13,20,'+48605444765',NULL,13),(14,21,'+48789774424',NULL,14),(15,22,'+48799000204',NULL,15),(16,23,NULL,NULL,17),(17,27,'+48787352000','2299504016',16),(18,28,'+48505322110',NULL,18),(19,29,NULL,NULL,19),(20,30,'+48505211220',NULL,20),(21,31,'+48504100200','1234432146',21),(22,32,'+48755311004',NULL,22),(23,33,'+48604123442',NULL,23),(24,34,'+48604007002','4007457721',24),(25,35,NULL,NULL,25),(26,36,'512721952',NULL,36);
 /*!40000 ALTER TABLE `klienci` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -300,7 +300,7 @@ CREATE TABLE `produkty` (
 
 LOCK TABLES `produkty` WRITE;
 /*!40000 ALTER TABLE `produkty` DISABLE KEYS */;
-INSERT INTO `produkty` VALUES (1,1,1.50,'PP001',NULL),(2,1,1.60,'PP002',NULL),(3,1,2.00,'PP003',5),(4,2,150.00,'RT001',1),(5,2,229.00,'RT002',NULL),(6,3,6.50,'PT001',NULL),(7,3,5.00,'PT002',NULL),(9,5,129.00,'SP001',NULL),(10,5,105.00,'SP002',NULL),(11,6,189.00,'SPR001',3),(12,7,85.00,'MT001',NULL),(13,8,700.00,'E001',NULL),(14,8,689.00,'E002',NULL),(15,9,150.00,'MB001',NULL),(16,10,950.00,'RS001',NULL),(17,10,1100.00,'RS002',NULL),(18,10,1299.00,'RS003',4),(19,11,79.00,'KB_12kg',NULL),(20,11,79.00,'KB_8kg',NULL),(21,11,89.00,'KB_16kg',NULL),(22,11,109.00,'KB_20kg',NULL),(23,12,25.00,'SK001',2),(24,12,40.00,'SK002',NULL),(25,13,60.00,'H_10kg',NULL),(26,13,60.00,'H_8kg',NULL),(27,13,70.00,'H_16kg',NULL),(28,13,45.00,'H_4kg',NULL),(29,14,90.00,'G_15kg',NULL),(30,14,105.00,'G_20kg',NULL),(31,15,5.00,'T_2.5kg',NULL),(32,15,5.00,'T_5kg',NULL),(33,15,6.50,'T_10kg',NULL),(34,15,8.00,'T_15kg',NULL),(35,15,10.00,'T_20kg',NULL),(36,16,1.80,'Z001',NULL),(37,17,40.00,'PN001',NULL),(38,17,45.00,'PN002',NULL),(39,17,55.00,'PN003',NULL),(40,18,40.00,'PK001',NULL),(41,18,49.00,'PK002',NULL),(42,19,35.00,'PS001',NULL),(43,19,45.00,'PS002',NULL),(44,20,35.00,'PR001',NULL);
+INSERT INTO `produkty` VALUES (1,1,1.50,'PP001',NULL),(2,1,1.60,'PP002',NULL),(3,1,2.00,'PP003',5),(4,2,300.00,'RT001',1),(5,2,300.00,'RT002',NULL),(6,3,6.50,'PT001',NULL),(7,3,5.00,'PT002',NULL),(9,5,129.00,'SP001',NULL),(10,5,105.00,'SP002',NULL),(11,6,189.00,'SPR001',3),(12,7,85.00,'MT001',NULL),(13,8,700.00,'E001',NULL),(14,8,689.00,'E002',NULL),(15,9,150.00,'MB001',NULL),(16,10,950.00,'RS001',NULL),(17,10,1100.00,'RS002',NULL),(18,10,1299.00,'RS003',4),(19,11,79.00,'KB_12kg',NULL),(20,11,79.00,'KB_8kg',NULL),(21,11,89.00,'KB_16kg',NULL),(22,11,109.00,'KB_20kg',NULL),(23,12,25.00,'SK001',2),(24,12,40.00,'SK002',NULL),(25,13,60.00,'H_10kg',NULL),(26,13,60.00,'H_8kg',NULL),(27,13,70.00,'H_16kg',NULL),(28,13,45.00,'H_4kg',NULL),(29,14,90.00,'G_15kg',NULL),(30,14,105.00,'G_20kg',NULL),(31,15,5.00,'T_2.5kg',NULL),(32,15,5.00,'T_5kg',NULL),(33,15,6.50,'T_10kg',NULL),(34,15,8.00,'T_15kg',NULL),(35,15,10.00,'T_20kg',NULL),(36,16,1.80,'Z001',NULL),(37,17,40.00,'PN001',NULL),(38,17,45.00,'PN002',NULL),(39,17,55.00,'PN003',NULL),(40,18,40.00,'PK001',NULL),(41,18,49.00,'PK002',NULL),(42,19,35.00,'PS001',NULL),(43,19,45.00,'PS002',NULL),(44,20,35.00,'PR001',NULL);
 /*!40000 ALTER TABLE `produkty` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -709,4 +709,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-18 15:03:50
+-- Dump completed on 2020-05-19 13:23:07
