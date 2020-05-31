@@ -13,7 +13,14 @@ namespace InternetShopProject.Database.Logic
         }
 
         public static List<Zamowieniadlaklienta> getAllClientOrders() {
-            return context.Zamowieniadlaklienta.ToList();
+            try { 
+                return context.Zamowieniadlaklienta.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
         }
     }
 }

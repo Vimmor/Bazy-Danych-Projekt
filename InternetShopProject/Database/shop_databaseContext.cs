@@ -43,7 +43,11 @@ namespace InternetShopProject.Database
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=bazydanych123;database=shop_database");
+                //to powinno byc w pliku ktory nie idzie do gita bo zawsze beda konflikty
+                optionsBuilder.UseMySQL("server=aplipage.pl;port=3306;user=pparczyk_bd2;password='@f111B23@C&;%Ng';database=pparczyk_bd2");
+                
+                //NIE USUWAC!!!!!!!!!!!!!!!!!!!
+                //optionsBuilder.UseMySQL("server=aplipage.pl;port=3306;user=pparczyk_bd2;password='@f111B23@C&;%Ng';database=pparczyk_bd2");
             }
         }
 
