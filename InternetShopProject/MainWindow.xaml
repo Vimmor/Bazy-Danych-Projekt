@@ -22,7 +22,7 @@
             <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="1"  Grid.Column="1" x:Name="homeButton" Width="auto" Height="auto" Background="Blue">
+        <Button Grid.Row="1"  Grid.Column="1" x:Name="homeButton" Height="auto" Background="Blue" Click="homeButton_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Features/HomeButton.png"/>
                 <TextBlock Text=" HOME" Foreground="Gray" FontSize="52"/>
@@ -32,8 +32,8 @@
         <Frame Grid.Row="1" Grid.Column="2" x:Name="Bar" Background="DarkSlateGray" NavigationUIVisibility="Hidden"/>
 
         <Frame Grid.Row="2" Grid.Column="1" x:Name="Menu" Background="DarkSlateGray" NavigationUIVisibility="Hidden"/>
-            
+
         <Frame Grid.Row="2" Grid.Column="2" x:Name="Page" NavigationUIVisibility="Hidden"/>
-        
+
     </Grid>
 </Window>

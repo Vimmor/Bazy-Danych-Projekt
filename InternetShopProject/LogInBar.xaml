@@ -12,7 +12,7 @@
             <Button x:Name="Koszyk" Background="Transparent" BorderBrush="Transparent" Height="40" Width="auto" Margin="5">
                 <Image Source="/Features/Koszyk.png"/>
             </Button>
-            <Button x:Name="Wyloguj" Foreground="Blue" Content="Wyloguj" FontSize="22" Background="Transparent" BorderBrush="Transparent" Height="40" Width="auto" Margin="5" />
+            <Button x:Name="Wyloguj" Foreground="Blue" Content="Wyloguj" FontSize="22" Background="Transparent" BorderBrush="Transparent" Height="40" Width="auto" Margin="5" Click="Wyloguj_Click" />
         </StackPanel>
     </Grid>
 </Page>

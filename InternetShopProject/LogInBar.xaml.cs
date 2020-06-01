@@ -22,5 +22,13 @@ namespace InternetShopProject
         {
             InitializeComponent();
         }
+
+        private void Wyloguj_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.logIn = false;
+            m.Page.Content = new MainPage();
+            m.Menu.Content = null;
+        }
     }
 }

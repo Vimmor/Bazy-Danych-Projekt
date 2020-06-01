@@ -14,19 +14,13 @@ using System.Windows.Shapes;
 namespace InternetShopProject
 {
     /// <summary>
-    /// Interaction logic for LogOutBar.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class LogOutBar : Page
+    public partial class MainPage : Page
     {
-        public LogOutBar()
+        public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void Wyloguj_Click(object sender, RoutedEventArgs e)
-        {
-            var m = (MainWindow)Application.Current.MainWindow;
-            m.Page.Content = new LogInPage();
         }
     }
 }

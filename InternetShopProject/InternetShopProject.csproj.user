@@ -13,10 +13,16 @@
     <Compile Update="LogInBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="LogInPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LogOutBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AdminMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WorkerMenu.xaml.cs">
@@ -30,7 +36,13 @@
     <Page Update="LogInBar.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="LogInPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LogOutBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

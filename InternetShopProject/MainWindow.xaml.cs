@@ -20,14 +20,20 @@ namespace InternetShopProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool logIn = false;
-        char user; // 'w' - worker, 'c' - client, 'a' - admin
+        public bool logIn = false;
+        public char user; // 'w' - worker, 'c' - client, 'a' - admin
 
         public MainWindow()
         {
             InitializeComponent();
 
             Bar.Content = new LogOutBar();
+            Page.Content = new MainPage();
+        }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Page.Content = new MainPage();
         }
     }
 }
