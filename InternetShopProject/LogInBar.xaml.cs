@@ -29,6 +29,7 @@ namespace InternetShopProject
             m.logIn = false;
             m.Page.Content = new MainPage();
             m.Menu.Content = null;
+            m.Bar.Content = new LogOutBar();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace InternetShopProject
         public MainPage()
         {
             InitializeComponent();
+            produktyDlaKlienta.ItemsSource = Database.Logic.Products.getAllProducts();
         }
     }
 }
