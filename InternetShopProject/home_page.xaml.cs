@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,14 +14,23 @@ using System.Windows.Shapes;
 namespace InternetShopProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy home_page.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class home_page : Page
     {
-        public MainWindow()
+        public home_page()
         {
             InitializeComponent();
-            // dataGrid.ItemsSource = Database.Logic.ClientsFromDB.getAllClientOrders();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

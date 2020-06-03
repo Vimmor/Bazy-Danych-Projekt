@@ -1,0 +1,65 @@
+﻿<Page x:Class="InternetShopProject.registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternetShopProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="700"
+      Title="registration">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
+        <Border x:Name="border" BorderThickness="2,2,2,2" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}">
+            <Border.Background>
+                <ImageBrush/>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <TextBlock x:Name="title_of_registration_page" HorizontalAlignment="Center" Height="75" Margin="0,8,0,0" Text="Rejestracja" TextAlignment="center" TextWrapping="Wrap" VerticalAlignment="Top" Width="680" FontSize="48" FontFamily="Comic Sans MS" Background="#FF3C56E0"/>
+        </Border>
+        <TextBlock Text="Dane personalne" TextWrapping="Wrap" Margin="10,96,357,324" FontSize="16" TextAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Dane adresowe" TextWrapping="Wrap" Margin="357,96,10,324" FontSize="16" TextAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Imię*" TextWrapping="Wrap" Margin="10,131,579,299" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Nazwisko*" TextWrapping="Wrap" Margin="10,156,579,274" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Login*" TextWrapping="Wrap" Margin="10,181,579,249" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Hasło*" TextWrapping="Wrap" Margin="10,206,579,224" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Powtórz hasło*" TextWrapping="Wrap" Margin="10,231,579,199" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Adres e-mail*" TextWrapping="Wrap" Margin="10,256,579,174" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Numer telefonu" TextWrapping="Wrap" Margin="10,281,579,149" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="NIP" TextWrapping="Wrap" Margin="10,305,579,125" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,131,365,299" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,156,365,274" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,181,365,249" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,206,365,224" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,231,365,199" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,256,365,174" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,281,365,149" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,306,365,124" FontSize="12" TextAlignment="Left"/>
+
+        <GridSplitter Width="4" HorizontalAlignment="Left" Margin="346,111,0,98" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+
+        <TextBlock Text="Ulica" TextWrapping="Wrap" Margin="360,131,227,299" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Numer budynku*" TextWrapping="Wrap" Margin="360,156,227,274" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Numer mieszkania" TextWrapping="Wrap" Margin="360,181,227,249" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Miejscowość*" TextWrapping="Wrap" Margin="360,206,227,224" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="Kod pocztowy*" TextWrapping="Wrap" Margin="360,231,227,199" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,131,12,299" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,156,12,274" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,181,12,249" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,206,12,224" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,231,12,199" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
+        <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" Margin="130,339,459,91" FontSize="10" TextAlignment="Left" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" Margin="483,339,106,91" FontSize="10" TextAlignment="Left" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
+        <Button Content="Zarejestruj się" Margin="232,382,232,29" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+
+
+
+
+    </Grid>
+</Page>
