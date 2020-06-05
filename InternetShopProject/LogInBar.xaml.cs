@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,24 +14,22 @@ using System.Windows.Shapes;
 namespace InternetShopProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LogInBar.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LogInBar : Page
     {
-        public bool logIn = false;
-        public char user; // 'w' - worker, 'c' - client, 'a' - admin
-
-        public MainWindow()
+        public LogInBar()
         {
             InitializeComponent();
-
-            Bar.Content = new LogOutBar();
-            Page.Content = new MainPage();
         }
 
-        private void homeButton_Click(object sender, RoutedEventArgs e)
+        private void Wyloguj_Click(object sender, RoutedEventArgs e)
         {
-            Page.Content = new MainPage();
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.logIn = false;
+            m.Page.Content = new MainPage();
+            m.Menu.Content = null;
+            m.Bar.Content = new LogOutBar();
         }
     }
 }

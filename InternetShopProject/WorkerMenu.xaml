@@ -1,0 +1,17 @@
+﻿<Page x:Class="InternetShopProject.WorkerMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternetShopProject"
+      mc:Ignorable="d" 
+      Title="WorkerMenu">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5,0">
+            <Button x:Name="Ordres" Content="Zamówienia" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0"/>
+            <Button x:Name="Invoice" Content="Faktury" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0"/>
+            <Button x:Name="Products" Content="Produkty" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0"/>
+        </StackPanel>
+    </Grid>
+</Page>
