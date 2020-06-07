@@ -10,7 +10,7 @@
     <Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5,0">
             <Button x:Name="Ordres" Content="Zamówienia" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0" Click="Ordres_Click"/>
-            <Button x:Name="Invoice" Content="Faktury" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0"/>
+            <Button x:Name="Invoice" Content="Faktury" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0" Click="Invoice_Click"/>
             <Button x:Name="Products" Content="Produkty" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0"/>
         </StackPanel>
     </Grid>

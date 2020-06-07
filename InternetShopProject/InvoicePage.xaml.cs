@@ -13,20 +13,18 @@ using System.Windows.Shapes;
 
 namespace InternetShopProject
 {
+    using Database.Logic;
     /// <summary>
-    /// Interaction logic for ClientMenu.xaml
+    /// Interaction logic for InvoicePage.xaml
     /// </summary>
-    public partial class ClientMenu : Page
+    public partial class InvoicePage : Page
     {
-        public ClientMenu()
+        public InvoicePage()
         {
             InitializeComponent();
-        }
-
-        private void myOrdres_Click(object sender, RoutedEventArgs e)
-        {
             var m = (MainWindow)Application.Current.MainWindow;
-            m.Page.Content = new OrdersPage();
+            if (m.user == 'a') InvoiceViever.ItemsSource = Invoice.getAllInvoices();
+            else InvoiceViever.ItemsSource = Invoice.getInvoicesForEmployer();
         }
     }
 }

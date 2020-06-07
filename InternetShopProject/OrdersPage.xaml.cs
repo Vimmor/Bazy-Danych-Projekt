@@ -13,20 +13,20 @@ using System.Windows.Shapes;
 
 namespace InternetShopProject
 {
+    using Database.Logic;
     /// <summary>
-    /// Interaction logic for ClientMenu.xaml
+    /// Interaction logic for OrdersPage.xaml
     /// </summary>
-    public partial class ClientMenu : Page
+    public partial class OrdersPage : Page
     {
-        public ClientMenu()
+        public OrdersPage()
         {
             InitializeComponent();
-        }
-
-        private void myOrdres_Click(object sender, RoutedEventArgs e)
-        {
             var m = (MainWindow)Application.Current.MainWindow;
-            m.Page.Content = new OrdersPage();
+            if(m.user=='c')
+            {
+                OrdersViever.ItemsSource = OrdersForClient.getOrdersForClientById(m.userId);
+            }
         }
     }
 }

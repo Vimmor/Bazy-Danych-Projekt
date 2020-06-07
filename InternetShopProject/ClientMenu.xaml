@@ -9,7 +9,7 @@
 
     <Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5,0">
-            <Button x:Name="myOrdres" Content="Moje Zamówienia" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0"/>
+            <Button x:Name="myOrdres" Content="Moje Zamówienia" Foreground="White" FontSize="32" Background="Transparent" BorderBrush="Blue" Height="80" Margin="5,5,5,0" Click="myOrdres_Click"/>
         </StackPanel>
     </Grid>
 </Page>

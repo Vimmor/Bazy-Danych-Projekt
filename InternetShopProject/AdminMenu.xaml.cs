@@ -29,5 +29,11 @@ namespace InternetShopProject
             var m = (MainWindow)Application.Current.MainWindow;
             m.Page.Content = new WorkerOrders();
         }
+
+        private void Invoice_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.Page.Content = new InvoicePage();
+        }
     }
 }

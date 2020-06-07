@@ -15,15 +15,20 @@ namespace InternetShopProject.Database.Logic
             else return 0;
         }
 
-        public char UserType(int id)
+        public (char, int) UserType(int id)
         {
             var exist = context.Pracownicy.Any(x => x.IdDanych == id);
             if (exist)
             {
-                if (context.Pracownicy.Where(x => x.IdDanych == id).First().Stanowisko == "administrator") return 'a';
-                else return 'w';
+                var worker = context.Pracownicy.Where(x => x.IdDanych == id).First();
+                if (worker.Stanowisko == "administrator") return ('a', worker.IdPracownika);
+                else return ('w', worker.IdPracownika);
             }
-            else return 'c';
+            else
+            {
+                var client = context.Klienci.Where(x => x.IdDanych == id).First();
+                return ('c', client.IdKlienta);
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ namespace InternetShopProject
             else
             {
                 MainWindow m = (MainWindow)Application.Current.MainWindow;
-                m.user = l.UserType(id);
+                (m.user, m.userId) = l.UserType(id);
                 m.logIn = true;
                 m.Bar.Content = new LogInBar();
                 if (m.user == 'a') m.Menu.Content = new AdminMenu();
