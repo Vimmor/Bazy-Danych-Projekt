@@ -56,7 +56,7 @@
         <TextBox Text="" TextWrapping="Wrap" Margin="483,231,12,199" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="postCode"/>
         <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" Margin="130,339,459,91" FontSize="10" TextAlignment="Left" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
         <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" Margin="483,339,106,91" FontSize="10" TextAlignment="Left" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-        <Button Content="Zarejestruj się" Margin="232,382,232,29" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Button Content="Zarejestruj się" Margin="232,382,232,29" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Click="Button_Click"/>
 
 
 
