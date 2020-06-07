@@ -27,12 +27,13 @@ namespace InternetShopProject
         {
             InitializeComponent();
 
-            Bar.Content = new LogOutBar();
-            Page.Content = new MainPage();
+            //Bar.Content = new LogOutBar();
+            Page.Content = new WorkerOrders();
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
+            //Page.Content = new MainPage();
             Page.Content = new MainPage();
         }
     }

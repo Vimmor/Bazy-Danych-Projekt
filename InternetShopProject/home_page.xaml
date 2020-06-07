@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:InternetShopProject"
       mc:Ignorable="d" 
       d:DesignHeight="450"
-      Title="Home page" Width="700">
+      Title="Home page">
 
     <Grid>
         <Grid.Background>
@@ -24,8 +24,8 @@
             </Border.OpacityMask>
             <TextBlock x:Name="title_of_home_page" HorizontalAlignment="Center" Height="75" Margin="0,8,0,0" Text="Sklep sportowy" TextAlignment="center" TextWrapping="Wrap" VerticalAlignment="Top" Width="680" FontSize="48" FontFamily="Comic Sans MS" Background="#FF3C56E0"/>
         </Border>
-        <Button Content="Zaloguj się jako klient" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Height="36" Width="250" Click="Button_Click" FontSize="16"/>
-        <Button Content="Zaloguj się jako pracownik" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Height="36" Width="250" Click="Button_Click" FontSize="16"/>
-        <Button Content="Rejestracja" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="36" Width="250" Click="Button_Click" FontSize="16"/>
+        <Button x:Name="clientLoggin" Content="Zaloguj się jako klient" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Height="36" Width="250" Click="clientLogginClick" FontSize="16"/>
+        <Button x:Name="employerLoggin" Content="Zaloguj się jako pracownik" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Height="36" Width="250" Click="Button_Click" FontSize="16"/>
+        <Button x:Name="registrationButton" Content="Rejestracja" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="36" Width="250" Click="Button_Click" FontSize="16"/>
     </Grid>
 </Page>

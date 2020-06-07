@@ -14,28 +14,14 @@ using System.Windows.Shapes;
 namespace InternetShopProject
 {
     /// <summary>
-    /// Logika interakcji dla klasy home_page.xaml
+    /// Logika interakcji dla klasy WorkerOrders.xaml
     /// </summary>
-    public partial class home_page : Page
+    public partial class WorkerOrders : Page
     {
-        public home_page()
+        public WorkerOrders()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void clientLogginClick(object sender, RoutedEventArgs e)
-        {
-            
+            ordersForWorkers.ItemsSource = Database.Logic.OrdersForEmployer.getOrdersByEmployerId(10);
         }
     }
 }
