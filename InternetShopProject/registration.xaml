@@ -32,14 +32,14 @@
         <TextBlock Text="Numer telefonu" TextWrapping="Wrap" Margin="10,281,579,149" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
         <TextBlock Text="NIP" TextWrapping="Wrap" Margin="10,305,579,125" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
 
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,131,365,299" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,156,365,274" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,181,365,249" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,206,365,224" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,231,365,199" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,256,365,174" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,281,365,149" FontSize="12" TextAlignment="Left"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="130,306,365,124" FontSize="12" TextAlignment="Left"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,131,365,299" FontSize="12" TextAlignment="Left" x:Name="name"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,156,365,274" FontSize="12" TextAlignment="Left" x:Name="surname"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,181,365,249" FontSize="12" TextAlignment="Left" x:Name="login"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,206,365,224" FontSize="12" TextAlignment="Left" x:Name="password"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,231,365,199" FontSize="12" TextAlignment="Left" x:Name="password2"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,256,365,174" FontSize="12" TextAlignment="Left" x:Name="mail"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,281,365,149" FontSize="12" TextAlignment="Left" x:Name="phone"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="130,306,365,124" FontSize="12" TextAlignment="Left" x:Name="nip"/>
 
         <GridSplitter Width="4" HorizontalAlignment="Left" Margin="346,111,0,98" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
 
@@ -49,11 +49,11 @@
         <TextBlock Text="Miejscowość*" TextWrapping="Wrap" Margin="360,206,227,224" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
         <TextBlock Text="Kod pocztowy*" TextWrapping="Wrap" Margin="360,231,227,199" FontSize="12" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
 
-        <TextBox Text="" TextWrapping="Wrap" Margin="483,131,12,299" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="483,156,12,274" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="483,181,12,249" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="483,206,12,224" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox Text="" TextWrapping="Wrap" Margin="483,231,12,199" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,131,12,299" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="street"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,156,12,274" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="buildingNumber"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,181,12,249" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="flatNumber"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,206,12,224" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="city"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="483,231,12,199" FontSize="12" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="postCode"/>
         <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" Margin="130,339,459,91" FontSize="10" TextAlignment="Left" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
         <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" Margin="483,339,106,91" FontSize="10" TextAlignment="Left" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
         <Button Content="Zarejestruj się" Margin="232,382,232,29" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
