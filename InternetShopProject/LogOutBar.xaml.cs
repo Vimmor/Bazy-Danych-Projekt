@@ -28,5 +28,11 @@ namespace InternetShopProject
             var m = (MainWindow)Application.Current.MainWindow;
             m.Page.Content = new LogInPage();
         }
+
+        private void Zerejestruj_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.Page.Content = new registration();
+        }
     }
 }

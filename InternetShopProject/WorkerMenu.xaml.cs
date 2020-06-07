@@ -22,5 +22,11 @@ namespace InternetShopProject
         {
             InitializeComponent();
         }
+
+        private void Ordres_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.Page.Content = new WorkerOrders();
+        }
     }
 }
