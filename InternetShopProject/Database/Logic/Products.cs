@@ -13,5 +13,11 @@ namespace InternetShopProject.Database.Logic
         {
             return context.Produktydlaklienta.ToList();
         }
+
+        public static int getProductIdByTypeName(string name)
+        {
+            int idDanych = context.Daneproduktu.Where(x => x.Nazwa == name).First().IdDanychProduktu;
+            return context.Produkty.Where(x => x.IdDanychProduktu == idDanych).First().IdProduktu;
+        }
     }
 }

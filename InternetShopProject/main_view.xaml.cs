@@ -13,6 +13,8 @@ using System.Windows.Shapes;
 
 namespace InternetShopProject
 {
+    using Database;
+    using Database.Logic;
     /// <summary>
     /// Logika interakcji dla klasy main_view.xaml
     /// </summary>
@@ -21,6 +23,15 @@ namespace InternetShopProject
         public main_view()
         {
             InitializeComponent();
+            ProductsTypeViever.ItemsSource = Products.getAllProducts();
+        }
+
+        public void AddToBasket_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            Produktydlaklienta product = ProductsTypeViever.SelectedItem as Produktydlaklienta;
+            int idProduktu = Products.getProductIdByTypeName(product.Nazwa);
+            m.ProductsInBasket.Add(idProduktu);
         }
     }
 }

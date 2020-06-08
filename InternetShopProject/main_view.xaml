@@ -11,6 +11,14 @@
     <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
         <Button Content="Przejdź" Margin="504,15,200,410" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"/>
         <ComboBox Margin="200,15,300,410"/>
-        <DataGrid Margin="100,50,100,30"/>
+        <DataGrid x:Name="ProductsTypeViever" Margin="100,50,100,30">
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Click="AddToBasket_Click"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+        </DataGrid>
     </Grid>
 </Page>

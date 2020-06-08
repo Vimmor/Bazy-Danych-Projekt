@@ -16,6 +16,9 @@
     <Compile Update="AdminMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="InvoicePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LogInBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OrdersPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="registration.xaml.cs">
@@ -45,6 +51,9 @@
     <Page Update="home_page.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="InvoicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LogInBar.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -61,6 +70,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OrdersPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="registration.xaml">

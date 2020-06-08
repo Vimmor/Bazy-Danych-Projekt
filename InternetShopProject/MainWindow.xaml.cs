@@ -23,6 +23,7 @@ namespace InternetShopProject
         public bool logIn = false;
         public char user; // 'w' - worker, 'c' - client, 'a' - admin
         public int userId;
+        public List<int> ProductsInBasket = new List<int>();
 
         public MainWindow()
         {
