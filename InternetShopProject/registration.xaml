@@ -21,35 +21,35 @@
             <TextBlock Text="Dane personalne" TextWrapping="Wrap" FontSize="24" TextAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Imię*" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="name"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="name"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Nazwisko*" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="surname"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="surname"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Login*" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="login"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="login"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Hasło*" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="password"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="password"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Powtórz hasło*" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="password2"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="password2"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Adres e-mail*" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="mail"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="mail"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="Numer telefonu" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="phone"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="phone"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Margin="10" Text="NIP" TextWrapping="Wrap" FontSize="16" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Margin="10" Width="400" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="nip"/>
+                <TextBox Margin="10" Width="300" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" x:Name="nip"/>
             </StackPanel>
             <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" FontSize="10" TextAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
         </StackPanel>
@@ -58,23 +58,23 @@
             <TextBlock Text="Dane adresowe" TextWrapping="Wrap" FontSize="24" TextAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="Ulica" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Width="400" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="street"/>
+                <TextBox Width="225" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="street"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="Numer budynku*" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Width="400" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="buildingNumber"/>
+                <TextBox Width="225" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="buildingNumber"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="Numer mieszkania" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Width="400" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="flatNumber"/>
+                <TextBox Width="225" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="flatNumber"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="Miejscowość*" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Width="400" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="city"/>
+                <TextBox Width="225" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="city"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="Kod pocztowy*" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Right" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
-                <TextBox Width="400" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="postCode"/>
+                <TextBox Width="225" TextWrapping="Wrap" Margin="10" FontSize="24" TextAlignment="Left" TextChanged="TextBox_TextChanged_1" x:Name="postCode"/>
             </StackPanel>
             <TextBlock Text="* - pole obowiązkowe" TextWrapping="Wrap" FontSize="10" TextAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"/>
             <Button Content="Zarejestruj się" Margin="400,106,0,0" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Click="Button_Click"/>
