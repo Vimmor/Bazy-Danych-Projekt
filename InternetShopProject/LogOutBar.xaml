@@ -9,7 +9,7 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0" >
-            <Button x:Name="Koszyk" Background="Transparent" BorderBrush="Transparent" Height="40" Width="auto" Margin="5">
+            <Button x:Name="Koszyk" Background="Transparent" BorderBrush="Transparent" Height="40" Width="auto" Margin="5" Click="Koszyk_Click">
                 <Image Source="/Features/Koszyk.png"/>
             </Button>
             <Button x:Name="Wyloguj" Foreground="Blue" Content="Zaloguj" FontSize="22" Background="Transparent" BorderBrush="Transparent" Height="40" Width="auto" Margin="5" Click="Wyloguj_Click" />

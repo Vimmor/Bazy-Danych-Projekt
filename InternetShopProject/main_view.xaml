@@ -15,7 +15,7 @@
             <DataGridTemplateColumn>
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                        <Button Click="AddToBasket_Click"/>
+                        <Button Click="AddToBasket_Click" Content="Dodaj do koszyka"/>
                     </DataTemplate>
                 </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>

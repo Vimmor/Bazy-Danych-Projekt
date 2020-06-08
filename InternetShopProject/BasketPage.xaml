@@ -1,0 +1,28 @@
+﻿<Page x:Class="InternetShopProject.BasketPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternetShopProject"
+      mc:Ignorable="d" 
+      Title="BasketPage">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="100,30,100,30">
+            <DataGrid x:Name="BasketViewer">
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="DeleteFromBasket_Click" Content="Usuń"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Do zapłaty: " FontSize="24"/>
+                <Label x:Name="sum" FontSize="24"/>
+            </StackPanel>
+            <Button Content="Do kasy" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Page>

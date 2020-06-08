@@ -37,5 +37,10 @@ namespace InternetShopProject.Database.Logic
             }
             return names;
         }
+
+        public static Produkty getProductById(int id)
+        {
+            return context.Produkty.Where(x => x.IdProduktu == id).First();
+        }
     }
 }

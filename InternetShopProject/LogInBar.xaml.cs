@@ -31,5 +31,11 @@ namespace InternetShopProject
             m.Menu.Content = null;
             m.Bar.Content = new LogOutBar();
         }
+
+        private void Koszyk_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.Page.Content = new BasketPage();
+        }
     }
 }
