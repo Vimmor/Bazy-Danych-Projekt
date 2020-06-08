@@ -29,6 +29,7 @@ namespace InternetShopProject
         {
             InitializeComponent();
 
+            Bar.Content = new LogOutBar();
             Page.Content = new main_view();
         }
 
