@@ -24,6 +24,7 @@ namespace InternetShopProject
         {
             InitializeComponent();
             ProductsTypeViever.ItemsSource = Products.getAllProducts();
+            CatChanger.ItemsSource = Products.getAllCategoryNames();
         }
 
         public void AddToBasket_Click(object sender, RoutedEventArgs e)
@@ -32,6 +33,11 @@ namespace InternetShopProject
             Produktydlaklienta product = ProductsTypeViever.SelectedItem as Produktydlaklienta;
             int idProduktu = Products.getProductIdByTypeName(product.Nazwa);
             m.ProductsInBasket.Add(idProduktu);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ProductsTypeViever.ItemsSource = Products.getAllProductsByCategory(CatChanger.SelectedItem.ToString());
         }
     }
 }
