@@ -15,6 +15,11 @@ namespace InternetShopProject.Database.Logic
             return context.Produktydlaklienta.ToList();
         }
 
+        public static List<Produktydlapracownika> getAllProductsForEmployee()
+        {
+            return context.Produktydlapracownika.ToList();
+        }
+
         public static List<Produktydlaklienta> getAllProductsByCategory(string name)
         {
             return context.Produktydlaklienta.Where(x => x.Kategoria == name).ToList();
