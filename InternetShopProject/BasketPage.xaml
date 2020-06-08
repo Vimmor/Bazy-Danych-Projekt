@@ -10,13 +10,20 @@
     <Grid>
         <StackPanel Orientation="Vertical" Margin="100,30,100,30">
             <DataGrid x:Name="BasketViewer">
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Click="DeleteFromBasket_Click" Content="Usuń"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"  Binding="{Binding Path=IdProduktu}"/>
+                    <DataGridTextColumn Header="IdDanych"  Binding="{Binding Path=IdDanychProduktu}"/>
+                    <DataGridTextColumn Header="Cena"  Binding="{Binding Path=Cena}"/>
+                    <DataGridTextColumn Header="NumerSeryjny"  Binding="{Binding Path=NumerSeryjny}"/>
+                    <DataGridTextColumn Header="IdZamowienia"  Binding="{Binding Path=IdZamowienia}"/>
+                    <DataGridTemplateColumn Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="DeleteFromBasket_Click" Content="Usuń"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
             </DataGrid>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Do zapłaty: " FontSize="24"/>
