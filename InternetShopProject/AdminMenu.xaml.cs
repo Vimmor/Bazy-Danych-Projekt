@@ -41,5 +41,17 @@ namespace InternetShopProject
             var m = (MainWindow)Application.Current.MainWindow;
             m.Page.Content = new ProductsForEmployeePage();
         }
+
+        private void Workers_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.Page.Content = new WorkersPage();
+        }
+
+        private void Agreements_Click(object sender, RoutedEventArgs e)
+        {
+            var m = (MainWindow)Application.Current.MainWindow;
+            m.Page.Content = new AgreementPage();
+        }
     }
 }

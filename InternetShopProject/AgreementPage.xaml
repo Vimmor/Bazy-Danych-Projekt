@@ -1,13 +1,13 @@
-﻿<Page x:Class="InternetShopProject.ProductsForEmployeePage"
+﻿<Page x:Class="InternetShopProject.AgreementPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:InternetShopProject"
       mc:Ignorable="d" 
-      Title="ProductsForEmployeePage">
+      Title="AgreementPage">
 
     <Grid>
-        <DataGrid x:Name="ProductViewer" Margin="100,30,100,30"/>
+        <DataGrid x:Name="AgreementViewer" Margin="100,30,100,30"/>
     </Grid>
 </Page>
