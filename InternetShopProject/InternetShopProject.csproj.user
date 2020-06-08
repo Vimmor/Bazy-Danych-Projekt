@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AgreementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BasketPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ClientMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +40,9 @@
     <Compile Update="OrdersPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ProductsForEmployeePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,8 +52,17 @@
     <Compile Update="WorkerOrders.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WorkersPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AgreementPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BasketPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ClientMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -75,6 +93,9 @@
     <Page Update="OrdersPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ProductsForEmployeePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="registration.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -82,6 +103,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WorkerOrders.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WorkersPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

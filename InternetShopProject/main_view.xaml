@@ -5,20 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:InternetShopProject"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
       Title="main_view">
 
     <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
-        <Button Content="Przejdź" Margin="504,15,200,410" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Click="Button_Click"/>
-        <ComboBox x:Name="CatChanger" Margin="200,15,300,410"/>
-        <DataGrid x:Name="ProductsTypeViever" Margin="100,50,100,30">
-            <DataGridTemplateColumn>
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <Button Click="AddToBasket_Click" Content="Dodaj do koszyka"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
-        </DataGrid>
+        <StackPanel Orientation="Vertical" Margin="100,30,100,30">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,15">
+                <ComboBox x:Name="CatChanger" Height="30" Width="500"/>
+                <Button Content="Przejdź"  Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Click="Button_Click" Height="30"/>
+            </StackPanel>
+            <DataGrid x:Name="ProductsTypeViever">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nazwa"  Binding="{Binding Path=Nazwa}"/>
+                    <DataGridTextColumn Header="Kategoria"  Binding="{Binding Path=Kategoria}"/>
+                    <DataGridTextColumn Header="Material"  Binding="{Binding Path=Material}"/>
+                    <DataGridTextColumn Header="CenaKatalogowa"  Binding="{Binding Path=CenaKatalogowa}"/>
+                    <DataGridTemplateColumn Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="AddToBasket_Click" Content="Dodaj do koszyka"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid> 
+        </StackPanel>
     </Grid>
 </Page>
